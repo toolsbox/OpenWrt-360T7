@@ -149,6 +149,7 @@ jobs:
              IP Adress：192.168.1.2
              Application：passwall，tailscale
          files: ${{ env.FIRMWARE }}/*
+         
     - name: PushPlus 通知
       if: env.PUSHPLUS_TOKEN
       continue-on-error: true
