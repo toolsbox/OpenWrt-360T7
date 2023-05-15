@@ -1,7 +1,7 @@
 # OpenWrt-360T7
 云编译OpenWrt固件，支持360T7
 
-# 修改记录
+修改记录
 2023.5.15 项目Forks 自 https://github.com/xiaw1024/OpenWrt-360T7 修改了diy1.sh, diy2.sh, distfeeds.conf，extra.conf, main.config 等文件 定制了适合自己的安装包
 
 
