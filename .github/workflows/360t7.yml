@@ -140,15 +140,15 @@ jobs:
 
     - name: 将固件上传到release
       uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: ${{ env.FIRMWARE_VERSION }}-OpenWrt-360T7
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
-
+         name: ${{ env.release_name }}
+         tag_name: ${{ env.release_tag }}
+         body: |
+             Gateway：192.168.1.1
+             IP Adress：192.168.1.2
+             Application：passwall，tailscale
+         files: ${{ env.FIRMWARE }}/*
     - name: PushPlus 通知
       if: env.PUSHPLUS_TOKEN
       continue-on-error: true
