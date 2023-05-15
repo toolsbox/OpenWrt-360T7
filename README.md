@@ -1,5 +1,6 @@
 # OpenWrt-360T7
 云编译OpenWrt固件，支持360T7
+
 360T7固件主要用作旁路由和AP
 - 默认IP 192.168.1.2 默认网关 192.168.1.1
 - 主要应用： Passwall，tailscale
